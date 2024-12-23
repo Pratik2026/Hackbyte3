@@ -12,7 +12,7 @@ import behanceLogo from "../../public/behanceLogo.svg";
 const SocialMediaIcon = ({ Icon, href }) => (
 	<a href={href} target="_blank">
 		<Icon
-			className="w-7 h-7 text-[#777777] transition ease-in-out delay-150 
+			className="w-7 h-7 bg-[#161616] text-[#777777] transition ease-in-out delay-150 
         hover:scale-125 duration-300"
 		/>
 	</a>
