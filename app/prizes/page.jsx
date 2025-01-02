@@ -3,10 +3,7 @@ import SponsoredTracks from "@/components/SponsoredTracks"
 import Image from "next/image"
 import YetToBeDisclosed from "@/components/YetToBeDisclosed"
 import medal from "@/public/HomePageLogo/medal.webp"
-import cup1 from "@/public/cup1.svg"
-import cup2 from "@/public/cup2.svg"
-import cup3 from "@/public/cup3.svg"
-import cup4 from "@/public/cup4.svg"
+import { Trophy } from "lucide-react"
 
 export const metadata = {
     title: "Prizes | HackByte",
@@ -38,19 +35,13 @@ export default function Prizes() {
                                 Winners
                             </p>
                             <div className="flex flex-col items-start gap-3 md:gap-4">
-                                <p
-                                    className="w-full lg:max-w-[85%] text-supporting-mediumGray
-                text-[1rem] md:text-[1.5rem] font-medium"
-                                >
+                                <p className="w-full lg:max-w-[85%] text-supporting-mediumGray text-[1rem] md:text-[1.5rem] font-medium">
                                     Collaborate and innovate to build something
                                     awesome ! All monetary prizes will be split
                                     equally among the winning team members.
                                 </p>
                                 <div className="rounded-full border bg-[#333333] border-[#D1CAC7] px-4 py-1">
-                                    <p
-                                        className="w-full text-supporting-mediumGray
-                  text-center text-[1rem] md:text-[1.5rem]"
-                                    >
+                                    <p className="w-full text-supporting-mediumGray text-center text-[1rem] md:text-[1.5rem]">
                                         Winners will also get MLH winner pins 🌟
                                     </p>
                                 </div>
@@ -62,7 +53,71 @@ export default function Prizes() {
                             className="w-[300px] h-[300px] hidden md:block"
                         />
                     </div>
+                    <div className="relative">
+                        <div className="flex w-full justify-center items-center gap-24 flex-col lg:flex-row py-16">
+                            <Image
+                                src={"/Prizes/silver.png"}
+                                alt="Silver"
+                                height={700}
+                                width={350}
+                                className="bg-blue-700"
+                            />
+                            <Image
+                                src={"/Prizes/gold.png"}
+                                alt="Silver"
+                                height={800}
+                                width={400}
+                                className="bg-blue-700"
+                            />
+                            <Image
+                                src={"/Prizes/bronze.png"}
+                                alt="Silver"
+                                height={700}
+                                width={350}
+                                className="bg-blue-700"
+                            />
+                        </div>
+                        <div className="mt-12 grid gap-4 md:grid-cols-2 px-4 md:px-12 xl:px-24">
+                            {/* Best Girls Team */}
+                            <div className="relative overflow-hidden rounded-xl bg-zinc-900">
+                                <div className="absolute left-0 top-0 h-full w-3 bg-gradient-to-b from-red-500 to-red-600" />
+                                <div className="absolute h-full w-full bg-gradient-to-r from-white/10 to-transparent" />
+                                <div className="relative p-6">
+                                    <div className="flex items-center gap-4">
+                                        <Trophy className="h-10 w-10 text-zinc-400" />
+                                        <div>
+                                            <h3 className="text-xl font-semibold text-white">
+                                                Best Girls Team
+                                            </h3>
+                                            <p className="text-base text-zinc-400">
+                                                Best performing All-Girls team
+                                                at HackByte.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div className="relative overflow-hidden rounded-xl bg-zinc-900">
+                                <div className="absolute left-0 top-0 h-full w-3 bg-gradient-to-b from-red-500 to-red-600" />
+                                <div className="absolute h-full w-full bg-gradient-to-r from-white/10 to-transparent" />
+                                <div className="relative p-6">
+                                    <div className="flex items-center gap-4">
+                                        <Trophy className="h-10 w-10 text-zinc-400" />
+                                        <div>
+                                            <h3 className="text-xl font-semibold text-white">
+                                                First Time Hacking?
+                                            </h3>
+                                            <p className="text-base text-zinc-400">
+                                                For Freshmen and Novice
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/*  
                     <div className="flex flex-col gap-6 md:gap-8">
                         <div className="grid grid-cols-1">
                             <PrizeCard
@@ -91,10 +146,7 @@ export default function Prizes() {
                             />
                         </div>
                         <div className="grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-2">
-                            <div
-                                className="flex flex-col items-center gap-4 md:gap-12 px-8 py-6 
-                  md:flex-row md:px-6 rounded-[8px] bg-[#FF3044]"
-                            >
+                            <div className="flex flex-col items-center gap-4 md:gap-12 px-8 py-6 md:flex-row md:px-6 rounded-[8px] bg-[#FF3044]">
                                 <Image
                                     src={cup4}
                                     alt="cup"
@@ -105,8 +157,7 @@ export default function Prizes() {
                                         Best Girls Team
                                     </p>
                                     <p
-                                        className="text-[#FFA5AE] font-semibold text-[1.25rem] 
-                      text-center md:text-left"
+                                        className="text-[#FFA5AE] font-semibold text-[1.25rem] text-center md:text-left"
                                     >
                                         Best performing All-Girls Team at
                                         HackByte
@@ -114,8 +165,7 @@ export default function Prizes() {
                                 </div>
                             </div>
                             <div
-                                className="flex flex-col items-center gap-4 md:gap-12 px-8 py-6 
-                  md:flex-row md:px-6 rounded-[8px] bg-[#FF3044]"
+                                className="flex flex-col items-center gap-4 md:gap-12 px-8 py-6 md:flex-row md:px-6 rounded-[8px] bg-[#FF3044]"
                             >
                                 <Image
                                     src={cup4}
@@ -127,8 +177,7 @@ export default function Prizes() {
                                         First Time Hacking?
                                     </p>
                                     <p
-                                        className="text-[#FFA5AE] font-medium text-[1.25rem] 
-                      text-center md:text-left"
+                                        className="text-[#FFA5AE] font-medium text-[1.25rem] text-center md:text-left"
                                     >
                                         For freshmen and novices
                                     </p>
@@ -136,6 +185,7 @@ export default function Prizes() {
                             </div>
                         </div>
                     </div>
+                    */}
                 </div>
                 {/* Sponsor Tracks Section */}
                 {/* <div className="w-full flex flex-col pt-24">
