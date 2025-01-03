@@ -71,7 +71,7 @@ export default function SponsoredTracks() {
     return (
         <section className="min-h-screen py-16 pt-36 font-extrabold">
             <div className="container mx-auto">
-                <h1 className="mb-4 text-4xl font-bold text-primary-white sm:text-5xl lg:text-6xl">
+                <h1 className="mb-4 text-4xl font-extrabold text-primary-white sm:text-5xl lg:text-6xl">
                     Sponsored Tracks
                 </h1>
                 <p className="mb-12 text-lg text-primary-white">
@@ -99,7 +99,7 @@ export default function SponsoredTracks() {
                                 <h3 className="mb-2 text-lg font-semibold text-primary-white">
                                     {track.title}
                                 </h3>
-                                <p className="mb-3 text-primary-red font-medium">
+                                <p className="mb-3 text-primary-red font-extrabold">
                                     {track.prize}
                                 </p>
                                 <p className="text-sm text-primary-white">
