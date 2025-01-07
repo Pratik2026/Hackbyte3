@@ -1,11 +1,12 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import HumansCard from "@/components/HumansCard";
-import YetToBeDisclosed from "@/components/YetToBeDisclosed";
-import Image from "next/image";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import HumansCard from "@/components/HumansCard"
+// import YetToBeDisclosed from "@/components/YetToBeDisclosed"
+import Image from "next/image"
 
-import humansSticker from "@/public/humansPage/humansSticker.svg";
-import { MentorsData } from "@/data/mentorsData";
-import { EldersData } from "@/data/eldersData";
+import humansSticker from "@/public/humansPage/humansSticker.svg"
+import { MentorsData } from "@/data/mentorsData"
+import { EldersData } from "@/data/eldersData"
+import { organizersData } from "@/data/organizers"
 
 export const metadata = {
   title: "Humans | HackByte",
@@ -24,7 +25,7 @@ export const metadata = {
     type: "website",
     locale: "en_US",
   },
-};
+}
 
 const Humans = () => {
   return (
@@ -35,7 +36,7 @@ const Humans = () => {
       >
         <div className="flex md:gap-[40px]">
           <div>
-            <h1 className="text-white font-black text-[28px] xl:text-[80px] xl:leading-[6rem] mb-5">
+            <h1 className="text-white font-bold text-[28px] xl:text-[80px] xl:leading-[6rem] mb-5">
               Meet the Humans
               <br /> of HackByte
             </h1>
@@ -79,7 +80,23 @@ const Humans = () => {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="Organizers">
-            <YetToBeDisclosed />
+            {/* <YetToBeDisclosed /> */}
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+                place-content-center place-items-center gap-10"
+            >
+              {organizersData.map((human, index) => (
+                <HumansCard
+                  key={index}
+                  index={index}
+                  github={human.githubProfileUrl || "/"}
+                  linkedin={human.linkedInProfileUrl || "/"}
+                  name={human.name}
+                  profilepic={`/humansPage/${human.profileImg}`}
+                  twitter={"/"}
+                />
+              ))}
+            </div>
           </TabsContent>
           <TabsContent value="Mentors">
             <div
@@ -104,7 +121,7 @@ const Humans = () => {
         </Tabs>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Humans;
+export default Humans
