@@ -36,20 +36,24 @@ const SingleCarousel = ({ images, className, duration = 5000 }) => {
     return () => clearInterval(interval)
   }, [images.length, duration])
 
-  const getSlideAnimation = () => {
-    if (!isTransitioning) return ""
-    return direction === "right" ? "animate-slideRight" : "animate-slideLeft"
+  const getSlideStyles = () => {
+    if (!isTransitioning) {
+      return "translate-x-0"
+    }
+    return direction === "right" ? "animate-slide-right" : "animate-slide-left"
   }
 
   return (
     <div className="relative group">
       <div className={`relative overflow-hidden rounded-xl ${className}`}>
-        <Image
-          src={images[currentIndex]}
-          alt={`Carousel ${currentIndex + 1}`}
-          className={`w-full h-full object-cover transition-all duration-500 ${getSlideAnimation()}`}
-          placeholder="blur"
-        />
+        <div className="relative w-full h-full">
+          <Image
+            src={images[currentIndex]}
+            alt={`Carousel ${currentIndex + 1}`}
+            className={`w-full h-full object-cover transition-transform duration-500 ease-in-out ${getSlideStyles()}`}
+            placeholder="blur"
+          />
+        </div>
       </div>
       <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
         {images.map((_, index) => (
@@ -149,23 +153,6 @@ const BannerImage = ({ imgsrc }) => {
       quality={100}
     />
   )
-}
-
-const styles = {
-  ".animate-slideRight": {
-    animation: "slideRight 500ms ease-in-out",
-  },
-  ".animate-slideLeft": {
-    animation: "slideLeft 500ms ease-in-out",
-  },
-  "@keyframes slideRight": {
-    "0%": { transform: "translateX(-100%)" },
-    "100%": { transform: "translateX(0)" },
-  },
-  "@keyframes slideLeft": {
-    "0%": { transform: "translateX(100%)" },
-    "100%": { transform: "translateX(0)" },
-  },
 }
 
 export { GridImage, BannerImage }
