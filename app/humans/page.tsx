@@ -1,11 +1,12 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import HumansCard from "@/components/HumansCard";
-import YetToBeDisclosed from "@/components/YetToBeDisclosed";
-import Image from "next/image";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import HumansCard from "@/components/HumansCard"
+// import YetToBeDisclosed from "@/components/YetToBeDisclosed"
+import Image from "next/image"
 
-import humansSticker from "@/public/humansPage/humansSticker.svg";
-import { OrganizersData } from "@/data/organizersData";
-import { FamilyData } from "@/data/familyData";
+import humansSticker from "@/public/humansPage/humansSticker.svg"
+import { MentorsData } from "@/data/mentorsData"
+import { EldersData } from "@/data/eldersData"
+import { organizersData } from "@/data/organizers"
 
 export const metadata = {
   title: "Humans | HackByte",
@@ -24,21 +25,21 @@ export const metadata = {
     type: "website",
     locale: "en_US",
   },
-};
+}
 
 const Humans = () => {
   return (
     <>
       <div
         className="flex flex-col min-h-screen lg:gap-[20px] 3xl:gap-[88px]
-          md:px-16 xl:px-28 lg:pb-[92px] xl:pt-[48px] px-4"
+          lg:px-16 lg:pb-[92px] pt-[48px] px-4"
       >
-        <div className="flex lg:gap-[40px]">
+        <div className="flex md:gap-[40px]">
           <div>
-            <div className="text-white font-black text-[28px] md:text-[2.9rem] lg:text-[3.9rem] xl:text-[80px] xl:leading-[6rem] mb-5">
+            <h1 className="text-white font-bold text-[28px] xl:text-[80px] xl:leading-[6rem] mb-5">
               Meet the Humans
               <br /> of HackByte
-            </div>
+            </h1>
             <p className="text-supporting-mediumGray font-medium lg:text-2xl md:text-xl text-sm">
               Hacker Experience is what we prioritize! Have questions, need
               assistance, or just want to connect? Feel free to reach out!
@@ -47,7 +48,7 @@ const Humans = () => {
           <Image
             src={humansSticker}
             alt="Humans Sticker"
-            className="lg:w-auto md:w-56 w-32"
+            className="lg:w-auto md:w-64 w-32"
           />
         </div>
 
@@ -75,36 +76,44 @@ const Humans = () => {
               className="sm:text-xl text-md min-[300px]:text-lg font-bold text-supporting-mediumGray
                          sm:py-2 sm:px-5 p-2 rounded-[8px]"
             >
-              Our family
+              Elders
             </TabsTrigger>
           </TabsList>
           <TabsContent value="Organizers">
+            {/* <YetToBeDisclosed /> */}
             <div
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
                 place-content-center place-items-center gap-10"
             >
-              {OrganizersData.map((human, index) => (
-                <HumansCard key={index} index={index} {...human} />
+              {organizersData.map((human, index) => (
+                <HumansCard
+                  key={index}
+                  index={index}
+                  github={human.githubProfileUrl || "/"}
+                  linkedin={human.linkedInProfileUrl || "/"}
+                  name={human.name}
+                  profilepic={`/humansPage/${human.profileImg}`}
+                  twitter={"/"}
+                />
               ))}
             </div>
           </TabsContent>
           <TabsContent value="Mentors">
-            {/* <div
+            <div
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
                 place-content-center place-items-center gap-10"
             >
               {MentorsData.map((human, index) => (
                 <HumansCard key={index} index={index} {...human} />
               ))}
-            </div> */}
-            <YetToBeDisclosed />
+            </div>
           </TabsContent>
           <TabsContent value="Elders">
             <div
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
                 place-content-center place-items-center"
             >
-              {FamilyData.map((human, index) => (
+              {EldersData.map((human, index) => (
                 <HumansCard key={index} index={index} {...human} />
               ))}
             </div>
@@ -112,7 +121,7 @@ const Humans = () => {
         </Tabs>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Humans;
+export default Humans

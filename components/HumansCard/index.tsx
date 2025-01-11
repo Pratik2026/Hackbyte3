@@ -1,21 +1,20 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image"
 import {
   TwitterLogoIcon,
   LinkedInLogoIcon,
   GitHubLogoIcon,
-} from "@radix-ui/react-icons";
-import behanceLogo from "../../public/behanceLogo.svg";
-import { IconProps } from "@radix-ui/react-icons/dist/types";
-import { ComponentType } from "react";
-import Link from "next/link";
+} from "@radix-ui/react-icons"
+import behanceLogo from "../../public/behanceLogo.svg"
+import { IconProps } from "@radix-ui/react-icons/dist/types"
+import { ComponentType } from "react"
 
 interface SocialMediaIconProps {
-  Icon: ComponentType<IconProps>;
-  href: string;
+  Icon: ComponentType<IconProps>
+  href: string
 }
 
 const SocialMediaIcon = ({ Icon, href }: SocialMediaIconProps) => (
-  <Link
+  <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
@@ -25,17 +24,17 @@ const SocialMediaIcon = ({ Icon, href }: SocialMediaIconProps) => (
       className="w-7 h-7 bg-[#161616] text-supporting-darkGray transition ease-in-out delay-150 
 		hover:scale-125 duration-300"
     />
-  </Link>
-);
+  </a>
+)
 
 interface HumansCardProps {
-  index: number;
-  name: string;
-  role?: string;
-  profilepic: StaticImageData;
-  linkedin: string;
-  twitter: string;
-  github: string;
+  index: number
+  name: string
+  role?: string
+  profilepic: StaticImageData | string
+  linkedin: string
+  twitter: string
+  github: string
 }
 
 const HumansCard: React.FC<HumansCardProps> = ({
@@ -51,23 +50,32 @@ const HumansCard: React.FC<HumansCardProps> = ({
       <div className="flex flex-col gap-3 p-[16px] shadow text-white justify-center items-center">
         <Image
           src={profilepic}
-          className="w-[232px] h-[232px] outline-none object-cover rounded-[12px]"
+          height={232}
+          width={232}
+          className="w-[232px] h-[232px] outline-none object-cover rounded-[12px] bg-primary-black"
           placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
           alt="Profile Picture"
         />
 
-        <div className="w-full flex flex-col gap-2 rounded-b-[8px]">
-          <p className="sm:text-xl text-lg text-white font-bold">{name}</p>
+        <div className="w-full flex flex-col gap-2 rounded-b-[8px] p-1">
+          <p className="sm:text-xl text-lg text-white">{name}</p>
           {role && (
             <p className="font-bold text-supporting-mediumGray text-md sm:text-md leading-9">
               {role}
             </p>
           )}
-          <div className="flex gap-6">
-            <SocialMediaIcon href={linkedin} Icon={LinkedInLogoIcon} />
-            <SocialMediaIcon href={twitter} Icon={TwitterLogoIcon} />
+          <div className="flex gap-6 py-2">
+            {linkedin !== "/" && (
+              <SocialMediaIcon href={linkedin} Icon={LinkedInLogoIcon} />
+            )}
+            {twitter !== "/" && (
+              <SocialMediaIcon href={twitter} Icon={TwitterLogoIcon} />
+            )}
             {name !== "Aditya Raj" ? (
-              <SocialMediaIcon href={github} Icon={GitHubLogoIcon} />
+              github !== "/" && (
+                <SocialMediaIcon href={github} Icon={GitHubLogoIcon} />
+              )
             ) : (
               <a
                 href="https://www.behance.net/adi_ux"
@@ -86,7 +94,7 @@ const HumansCard: React.FC<HumansCardProps> = ({
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default HumansCard;
+export default HumansCard
