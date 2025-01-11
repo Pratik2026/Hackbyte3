@@ -1,8 +1,5 @@
-"use client"
-
-import React, { useState, useEffect } from "react"
 import Image from "next/image"
-
+import { ClientCarousel } from "./carousel"
 import img1 from "@/public/ImageGallery/img1.webp"
 import img2 from "@/public/ImageGallery/img2.webp"
 import img3 from "@/public/ImageGallery/img3.webp"
@@ -13,63 +10,7 @@ import img7 from "@/public/ImageGallery/img7.webp"
 import img8 from "@/public/ImageGallery/img8.webp"
 import img9 from "@/public/ImageGallery/img9.webp"
 
-const SingleCarousel = ({ images, className, duration = 5000 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [direction, setDirection] = useState("right")
-  const [isTransitioning, setIsTransitioning] = useState(false)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const newDirection = Math.random() > 0.5 ? "right" : "left"
-      setDirection(newDirection)
-      setIsTransitioning(true)
-
-      if (newDirection === "right") {
-        setCurrentIndex((prev) => (prev + 1) % images.length)
-      } else {
-        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
-      }
-
-      setTimeout(() => setIsTransitioning(false), 500)
-    }, duration)
-
-    return () => clearInterval(interval)
-  }, [images.length, duration])
-
-  const getSlideStyles = () => {
-    if (!isTransitioning) {
-      return "translate-x-0"
-    }
-    return direction === "right" ? "animate-slide-right" : "animate-slide-left"
-  }
-
-  return (
-    <div className="relative group">
-      <div className={`relative overflow-hidden rounded-xl ${className}`}>
-        <div className="relative w-full h-full">
-          <Image
-            src={images[currentIndex]}
-            alt={`Carousel ${currentIndex + 1}`}
-            className={`w-full h-full object-cover transition-transform duration-500 ease-in-out ${getSlideStyles()}`}
-            placeholder="blur"
-          />
-        </div>
-      </div>
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-        {images.map((_, index) => (
-          <div
-            key={index}
-            className={`w-1.5 h-1.5 rounded-full ${
-              currentIndex === index ? "bg-white" : "bg-white/50"
-            }`}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
-
-const GridImage = () => {
+const GridImage = async () => {
   const carousels = [
     { images: [img6, img1, img4], duration: 2000 },
     { images: [img7, img2, img5], duration: 3500 },
@@ -86,17 +27,17 @@ const GridImage = () => {
     <div className="max-w-8xl mx-auto py-16">
       <div className="flex flex-col gap-5 md:flex-row">
         <div className="flex flex-col gap-5 items-center">
-          <SingleCarousel
+          <ClientCarousel
             images={carousels[0].images}
             duration={carousels[0].duration}
             className="xl:w-[420px] xl:h-[300px] lg:w-[320px] w-[320px]"
           />
-          <SingleCarousel
+          <ClientCarousel
             images={carousels[1].images}
             duration={carousels[1].duration}
             className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px]"
           />
-          <SingleCarousel
+          <ClientCarousel
             images={carousels[2].images}
             duration={carousels[2].duration}
             className="xl:w-[420px] xl:h-[530px] lg:w-[320px] w-[320px] h-[320px]"
@@ -104,17 +45,17 @@ const GridImage = () => {
         </div>
 
         <div className="flex flex-col gap-5 items-center">
-          <SingleCarousel
+          <ClientCarousel
             images={carousels[3].images}
             duration={carousels[3].duration}
             className="xl:w-[420px] xl:h-[520px] lg:w-[320px] w-[320px] h-[320px]"
           />
-          <SingleCarousel
+          <ClientCarousel
             images={carousels[4].images}
             duration={carousels[4].duration}
             className="xl:w-[420px] xl:h-[300px] lg:w-[320px] w-[320px]"
           />
-          <SingleCarousel
+          <ClientCarousel
             images={carousels[5].images}
             duration={carousels[5].duration}
             className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px]"
@@ -122,17 +63,17 @@ const GridImage = () => {
         </div>
 
         <div className="flex flex-col gap-5 items-center">
-          <SingleCarousel
+          <ClientCarousel
             images={carousels[6].images}
             duration={carousels[6].duration}
             className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px]"
           />
-          <SingleCarousel
+          <ClientCarousel
             images={carousels[7].images}
             duration={carousels[7].duration}
             className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px]"
           />
-          <SingleCarousel
+          <ClientCarousel
             images={carousels[8].images}
             duration={carousels[8].duration}
             className="xl:w-[420px] xl:h-[540px] lg:w-[320px] w-[320px] h-[320px]"
@@ -143,7 +84,7 @@ const GridImage = () => {
   )
 }
 
-const BannerImage = ({ imgsrc }) => {
+const BannerImage = async ({ imgsrc }) => {
   return (
     <Image
       src={imgsrc}
