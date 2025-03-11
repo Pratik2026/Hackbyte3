@@ -23,7 +23,7 @@ const SocialMediaIcon = ({ Icon, href }: SocialMediaIconProps) => (
   >
     <Icon
       className="w-7 h-7 bg-[#161616] text-supporting-darkGray transition ease-in-out delay-150 
-		hover:scale-125 duration-300"
+		hover:scale-125 duration-300 rounded-md"
     />
   </Link>
 );

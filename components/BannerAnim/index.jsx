@@ -369,7 +369,7 @@ const BannerAnim = () => {
                 id="tearCanvas"
                 width="1280"
                 height="500"
-                className="rotate-[-10deg]"
+                className="rotate-[-8deg]"
                 ref={canvasRef}
             ></canvas>
         </div>

@@ -74,7 +74,7 @@ const HeroSection = () => {
         </div>
       </div>
       {/* This btn is for the Desktop view */}
-      <div className="hidden sm:flex justify-center md:justify-end md:mr-8 lg:mr-16 md:-mt-24 lg:-mt-12 xl:-mt-20 mb-8">
+      <div className="hidden sm:flex justify-center md:justify-end md:mr-8 lg:mr-16 md:-mt-24 lg:-mt-12 xl:-mt-16 mb-8">
         <PulsatingButton className="px-6 xl:px-8 py-2 xl:py-3 bg-white text-[#FF3044] font-bold text-[28px] xl:text-[32px] hover:bg-black hover:text-white z-10 hover:cursor-pointer">
         <a href="https://hackbyte3.devfolio.co/">Register Now!</a>
         </PulsatingButton>
@@ -86,7 +86,7 @@ const HeroSection = () => {
           <a href="https://hackbyte3.devfolio.co/">Register Now!</a>
         </PulsatingButton>
         </div>
-        <div className="flex justify-evenly md:justify-center gap-4 md:pt-4">
+        <div className="flex justify-evenly md:justify-center gap-4 md:pt-4 z-20">
         <Link href="https://www.linkedin.com/company/bitbyte-tpc">
           <Image
           src={linkedIn}

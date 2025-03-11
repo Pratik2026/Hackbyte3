@@ -1,10 +1,10 @@
-import Pratik from "@/public/humansPage/pratik.webp";
+import Pratik from "@/public/humansPage/pratik.jpg";
 import Eshaan from "@/public/humansPage/eshaan.jpg";
-import Joyee from "@/public/humansPage/joyee.jpg";
+import Joyee from "@/public/humansPage/joyee.jpeg";
 import Aditya from "@/public/humansPage/Aditya_Gupta.jpg";
 import Akshay from "@/public/humansPage/akshay.jpg";
 import Divyansh from "@/public/humansPage/divyansh.webp";
-import Uttara from "@/public/humansPage/uttara.webp";
+import Uttara from "@/public/humansPage/uttara.jpg";
 import Rishi from "@/public/humansPage/Rishi.jpg";
 import paloju from "@/public/humansPage/paloju.webp";
 import revathy from "@/public/humansPage/revathy.jpg";
@@ -15,6 +15,9 @@ import shreyans from "@/public/humansPage/shreyans.webp";
 import rishikesh from "@/public/humansPage/rishikesh.webp";
 import aarav from "@/public/humansPage/aarav.webp";
 import rahul from "@/public/humansPage/rahul.webp";
+import kush from "@/public/humansPage/kushagra.webp";
+import dhruv from "@/public/humansPage/dhruv.jpg";
+import abhijay from "@/public/humansPage/abhijay.jpeg";
 
 
 export const OrganizersData = [
@@ -155,5 +158,29 @@ export const OrganizersData = [
     linkedin: "https://www.linkedin.com/in/aarav-jain-094a77258/",
     twitter: "#",
     github: "https://github.com/aarav0012",
+  },
+  {
+    name: "Kushagra Gupta",
+    profilepic: kush,
+    role: "Organizer",
+    linkedin: "https://www.linkedin.com/in/kushagra-gupta-22b73324a/",
+    twitter: "https://x.com/https://x.com/Kushdapush5",
+    github: "https://github.com/Kushdapush",
+  },
+  {
+    name: "Dhruv Parmar",
+    profilepic: dhruv,
+    role: "Organizer",
+    linkedin: "https://www.linkedin.com/in/dhruv-parmar-61b31226b/",
+    twitter: "#",
+    github: "https://github.com/REC-1104",
+  },
+  {
+    name: "Abhijay Rawat",
+    profilepic: abhijay,
+    role: "Organizer",
+    linkedin: "https://www.linkedin.com/in/abhijayrawat/",
+    twitter: "#",
+    github: "https://github.com/abhijayrawat",
   },
 ];

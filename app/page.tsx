@@ -17,6 +17,7 @@ import bottomstats from "@/public/upper.svg";
 import topstats from "@/public/lower.svg";
 import * as motion from "motion/react-client";
 import AnimatedTitle from "@/components/AnimatedTitle";
+import CountAnimation from "@/components/CountAnimation";
 import Link from "next/link";
 
 interface GuidlinesCard {
@@ -126,9 +127,7 @@ export default function Home() {
         />
         <div className="w-full flex justify-evenly rotate-[5deg] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div className="max-w-[90px] md:max-w-[250px] text-center flex flex-col items-center gap-2 lg:gap-4">
-            <div className="font-black text-xl md:text-4xl lg:text-6xl xl:text-7xl text-white">
-              2437
-            </div>
+            <CountAnimation targetValue={2437} />
             <div className="font-bold text-xs md:text-2xl lg:text-3xl xl:text-4xl text-white">
               Registrations
             </div>
@@ -137,9 +136,7 @@ export default function Home() {
             </div>
           </div>
           <div className="max-w-[90px] md:max-w-[250px] text-center flex flex-col items-center gap-2 lg:gap-4">
-            <div className="font-black text-xl md:text-4xl lg:text-6xl xl:text-7xl text-white">
-              412
-            </div>
+          <CountAnimation targetValue={412} />
             <div className="font-bold text-xs md:text-2xl lg:text-3xl xl:text-4xl text-white">
               Participants
             </div>
@@ -148,9 +145,7 @@ export default function Home() {
             </div>
           </div>
           <div className="max-w-[90px] md:max-w-[250px] text-center flex flex-col items-center gap-2 lg:gap-4">
-            <div className="font-black text-xl md:text-4xl lg:text-6xl xl:text-7xl text-white">
-              100+
-            </div>
+          <CountAnimation targetValue={100} />
             <div className="font-bold text-xs md:text-2xl lg:text-3xl xl:text-4xl text-white">
               Volunteers
             </div>
@@ -159,9 +154,7 @@ export default function Home() {
             </div>
           </div>
           <div className="max-w-[90px] md:max-w-[250px] text-center flex flex-col items-center gap-2 lg:gap-4">
-            <div className="font-black text-xl md:text-4xl lg:text-6xl xl:text-7xl text-white">
-              100+
-            </div>
+          <CountAnimation targetValue={100} />
             <div className="font-bold text-xs md:text-2xl lg:text-3xl xl:text-4xl text-white">
               Projects
             </div>
