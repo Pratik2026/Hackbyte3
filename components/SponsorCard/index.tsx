@@ -38,6 +38,10 @@ const SponsorCard: React.FC<SponsorCardProps> = ({
       bgColor: "#463026",
       textColor: "#E49977",
     },
+    "Platform Partner": {
+      bgColor: "#483869",
+      textColor: "#C1A5FF",
+    },
   };
 
   const bgColor = sponsorColor[category]?.bgColor ?? defaultBgColor;
@@ -47,10 +51,10 @@ const SponsorCard: React.FC<SponsorCardProps> = ({
     <>
       <AnimatedTitle delay={0.2} viewport={true}>
         <Link href={site} target="_blank" rel="noreferrer" key={index}>
-          <div className="w-full text-white hover:scale-105 transition-all ease-in-out duration-300 max-w-[350px] md:max-w-[400px]">
+          <div className={`w-full font-gotham text-white ${index % 3 == 0 ? "hover:-rotate-3" : "hover:rotate-3"} hover:scale-105 transition-all ease-in-out duration-500 max-w-[350px] md:max-w-[400px]`}>
             <Image
               src={sponsorimgsrc}
-              className="w-full h-[181px] xl:h-[216px] rounded-t-[20px] outline-none"
+              className="w-full h-[181px] xl:h-[216px] rounded-t-[20px] outline-none object-cover"
               placeholder="blur"
               alt={sponsor}
             />

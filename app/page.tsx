@@ -1,7 +1,7 @@
 import Image from "next/image";
 import stats from "@/public/HomePageLogo/redtape2.png";
 import HeroSection from "@/components/Herosection";
-import Newsletter from "@/components/Newsletter";
+import DiscordCard from "@/components/DiscordCard";
 import whyParticipate from "@/public/HomePageLogo/whyParticipate.png";
 import g1 from "@/public/HomePageLogo/g1.svg";
 import g2 from "@/public/HomePageLogo/g2.svg";
@@ -228,11 +228,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-4 md:gap-16 pt-4 lg:pt-8 xl:pb-12 pb-8 md:pb-16">
-        <div className=" text-supporting-lightGray lg:text-5xl monitor:text-7xl xl:text-6xl md:text-4xl text-2xl font-bold leading-[64px] pb-4 md:pb-8 lg:pb-16">
-          <AnimatedTitle viewport={true}>Join our Newsletter</AnimatedTitle>
+      <div className="flex flex-col items-center gap-4 md:gap-16 pt-4 lg:pt-8 xl:pb-12 pb-8 md:pb-16 mt-8 md:my-20 xl:my-32">
+        <div className=" text-supporting-lightGray lg:text-5xl monitor:text-7xl xl:text-6xl md:text-4xl text-2xl font-bold pb-4 md:pb-8 lg:pb-16 text-center">
+          <AnimatedTitle viewport={true}>
+            Join our Discord Community
+          </AnimatedTitle>
         </div>
-        <Newsletter />
+        <DiscordCard />
       </div>
     </div>
   );

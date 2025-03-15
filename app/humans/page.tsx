@@ -48,7 +48,7 @@ const Humans = () => {
           <Image
             src={humansSticker}
             alt="Humans Sticker"
-            className="lg:w-auto md:w-56 w-32 hidden md:block"
+            className="lg:w-auto md:w-56 w-32 hidden md:block hover:rotate-6 hover:scale-105 transition-all ease-in-out duration-500"
           />
         </div>
 

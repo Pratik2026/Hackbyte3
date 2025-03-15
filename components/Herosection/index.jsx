@@ -75,7 +75,7 @@ const HeroSection = () => {
       </div>
       {/* This btn is for the Desktop view */}
       <div className="hidden sm:flex justify-center md:justify-end md:mr-8 lg:mr-16 md:-mt-24 lg:-mt-12 xl:-mt-16 mb-8">
-        <PulsatingButton className="px-6 xl:px-8 py-2 xl:py-3 bg-white text-[#FF3044] font-bold text-[28px] xl:text-[32px] hover:bg-black hover:text-white z-10 hover:cursor-pointer">
+        <PulsatingButton className="px-6 xl:px-8 py-2 xl:py-3 bg-white text-[#FF3044] font-bold text-[28px] xl:text-[32px] hover:bg-black hover:text-white z-10 hover:cursor-pointer transition-colors ease-in-out duration-700">
         <a href="https://hackbyte3.devfolio.co/">Register Now!</a>
         </PulsatingButton>
       </div>

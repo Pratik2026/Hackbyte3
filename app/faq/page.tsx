@@ -9,7 +9,6 @@ import {
 import faq from "@/public/Faq/question_mark.png";
 import Link from "next/link";
 import AnimatedTitle from "@/components/AnimatedTitle";
-import DiscordCard from "@/components/DiscordCard";
 
 export const metadata = {
   title: "FAQ | HackByte",
@@ -97,7 +96,7 @@ export default function FAQSection() {
           <Image
             src={faq}
             alt=""
-            className="hidden md:flex md:w-[200px] lg:w-[220px] lg:pb-28 xl:pb-0"
+            className="hidden md:flex md:w-[200px] lg:w-[220px] lg:pb-28 xl:pb-0 hover:-rotate-6 hover:scale-105 transition-all ease-in-out duration-500"
           />
         </div>
       </div>
@@ -127,7 +126,7 @@ export default function FAQSection() {
           </div>
         </div>
 
-        <div className="animate-in fade-in duration-500 delay-500 md:h-[750px] lg:h-[760px] xl:h-[800px]">
+        <div className="animate-in fade-in duration-500 delay-500 md:h-[750px] lg:h-[760px] xl:h-[900px]">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AnimatedTitle key={index}>
@@ -146,14 +145,6 @@ export default function FAQSection() {
             ))}
           </Accordion>
         </div>
-      </div>
-      <div className="flex flex-col items-center gap-4 md:gap-16 pt-4 lg:pt-8 xl:pb-12 pb-8 md:pb-16 mt-8 md:my-20 xl:my-32">
-        <div className=" text-supporting-lightGray lg:text-5xl monitor:text-7xl xl:text-6xl md:text-4xl text-2xl font-bold pb-4 md:pb-8 lg:pb-16 text-center">
-          <AnimatedTitle viewport={true}>
-            Join our Discord Community
-          </AnimatedTitle>
-        </div>
-        <DiscordCard />
       </div>
     </div>
   );
