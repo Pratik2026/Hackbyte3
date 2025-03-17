@@ -6,28 +6,30 @@ export default function CountAnimation({ targetValue }) {
   const count = useMotionValue(0);
   const rounded = useTransform(count, Math.round);
   const ref = useRef();
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
           animate(count, targetValue, {
             duration: 1,
-            ease: "linear",
+            ease: "easeInOut",
           });
         }
       },
       {
         root: null,
         rootMargin: "0px",
-        threshold: 1,
+        threshold: 0.5,
       }
     );
 
     if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, []);
+  }, [targetValue]);
 
   return (
     <div ref={ref} className="flex">

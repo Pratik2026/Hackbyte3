@@ -59,7 +59,7 @@ const PrizeSection = () => {
     {
       lampImage: lamp_yellow,
       cupImage: cup1,
-      prizeAmount: "INR 35K",
+      prizeAmount: "INR 40K",
       prizeDescription: "1st Prize - Gold",
       gradientColors:
         "from-[#FFAE0C]/30 via-[#FFAE0C]/40 to-transparent to-85%",

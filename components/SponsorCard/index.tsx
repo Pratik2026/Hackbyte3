@@ -50,7 +50,7 @@ const SponsorCard: React.FC<SponsorCardProps> = ({
   return (
     <>
       <AnimatedTitle delay={0.2} viewport={true}>
-        <Link href={site} target="_blank" rel="noreferrer" key={index}>
+        <Link href={site} target="_blank" rel="noreferrer" key={index} className="flex justify-center">
           <div className={`w-full font-gotham text-white ${index % 3 == 0 ? "hover:-rotate-3" : "hover:rotate-3"} hover:scale-105 transition-all ease-in-out duration-500 max-w-[350px] md:max-w-[400px]`}>
             <Image
               src={sponsorimgsrc}
