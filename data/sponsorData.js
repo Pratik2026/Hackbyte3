@@ -73,16 +73,28 @@ export const normalSponsorsData = [
 
 export const inKindSponsorsData = [
   {
+    sponsor: "Appwrite",
+    category: "Community Sponsor",
+    sponsorimgsrc: appwrite,
+    site: "https://appwrite.io/",
+  },
+  {
+    sponsor: "Keploy",
+    category: "Community Sponsor",
+    sponsorimgsrc: keploy,
+    site: "https://keploy.io/",
+  },
+  {
     sponsor: "CodeCrafters",
     category: "Community Sponsor",
     sponsorimgsrc: codecrafters,
     site: "https://codecrafters.io/",
   },
   {
-    sponsor: "theDevArmy",
+    sponsor: "Commudle",
     category: "Community Sponsor",
-    sponsorimgsrc: thedevarmy,
-    site: "https://thedevarmy.com/",
+    sponsorimgsrc: commudle,
+    site: "https://commudle.com/",
   },
   {
     sponsor: "Balsamiq",
@@ -97,34 +109,22 @@ export const inKindSponsorsData = [
     site: "https://www.wolfram.com/wolfram-one/",
   },
   {
-    sponsor: "Commudle",
-    category: "Community Sponsor",
-    sponsorimgsrc: commudle,
-    site: "https://commudle.com/",
-  },
-  {
     sponsor: "Hyperbeam",
     category: "Community Sponsor",
     sponsorimgsrc: hyperbeam,
     site: "https://hyperbeam.com/",
   },
   {
+    sponsor: "theDevArmy",
+    category: "Community Sponsor",
+    sponsorimgsrc: thedevarmy,
+    site: "https://thedevarmy.com/",
+  },
+  {
     sponsor: "TechLeads",
     category: "Community Sponsor",
     sponsorimgsrc: techleads,
     site: "https://www.linkedin.com/company/officialtechleads/",
-  },
-  {
-    sponsor: "Keploy",
-    category: "Community Sponsor",
-    sponsorimgsrc: keploy,
-    site: "https://keploy.io/",
-  },
-  {
-    sponsor: "Appwrite",
-    category: "Community Sponsor",
-    sponsorimgsrc: appwrite,
-    site: "https://appwrite.io/",
   },
   //   {
   //     sponsor: "Finlatics",

@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import SponsorCard from "@/components/SponsorCard";
-import HB3Logo from "@/public/FooterLogo/Hackbyte3Logo.png";
+import HB3Logo from "@/public/HB3Logo.png";
 import webdock from "@/public/partnersPage/webdock.png";
 import benq from "@/public/partnersPage/benq.png";
 import { inKindSponsorsData, normalSponsorsData } from "@/data/sponsorData";
@@ -63,7 +63,7 @@ const PartnersPage = () => {
             </div>
             <Image
               src={HB3Logo}
-              className="hidden md:block xl:w-[400px] lg:w-72 md:w-64 w-32"
+              className="hidden md:block xl:w-[380px] lg:w-72 md:w-64 w-32"
               alt="HackByte 3.0 Logo"
             />
           </div>

@@ -75,7 +75,7 @@ const faqs = [
   {
     question: "Do projects need to be related to the theme?",
     answer:
-      "No. We want to encourage open innovation, so you're free to choose any idea you're passionate about and build something meaningful.",
+      "No. We want to encourage open innovation, so you're free to choose any idea you're passionate about and build something meaningful.",
   },
 ];
 

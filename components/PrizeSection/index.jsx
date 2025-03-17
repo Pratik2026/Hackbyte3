@@ -1,10 +1,10 @@
 import Image from "next/image";
-import lamp_orange from "@/public/lamp_orange.svg";
-import lamp_white from "@/public/lamp_white.svg";
-import lamp_yellow from "@/public/lamp_yellow.svg";
-import cup2 from "@/public/cup2.svg";
-import cup3 from "@/public/cup3.svg";
-import cup1 from "@/public/cup1.svg";
+import lamp_orange from "@/public/prizesPageLogo/lamp_orange.svg";
+import lamp_white from "@/public/prizesPageLogo/lamp_white.svg";
+import lamp_yellow from "@/public/prizesPageLogo/lamp_yellow.svg";
+import cup2 from "@/public/prizesPageLogo/cup2.svg";
+import cup3 from "@/public/prizesPageLogo/cup3.svg";
+import cup1 from "@/public/prizesPageLogo/cup1.svg";
 import AnimatedTitle from "../AnimatedTitle";
 
 const PrizeCard = ({

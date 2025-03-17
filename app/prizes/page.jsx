@@ -2,7 +2,7 @@ import PrizeSection from "@/components/PrizeSection";
 import Image from "next/image";
 import YetToBeDisclosed from "@/components/YetToBeDisclosed";
 import medal from "@/public/HomePageLogo/medal.webp";
-import cup4 from "@/public/cup4 (2).svg";
+import cup4 from "@/public/prizesPageLogo/cup4 (2).svg";
 
 export const metadata = {
   title: "Prizes | HackByte",
