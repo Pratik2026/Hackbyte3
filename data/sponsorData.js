@@ -67,7 +67,7 @@ export const normalSponsorsData = [
     sponsor: "Endless Domains",
     category: "Bronze Sponsor",
     sponsorimgsrc: endlessDomains,
-    site: "https://endless.domains/",
+    site: "https://endlessdomains.io/",
   },
 ];
 
