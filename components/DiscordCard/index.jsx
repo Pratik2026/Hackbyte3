@@ -23,7 +23,7 @@ export default function DiscordCard() {
             bounce: 0.5,
           },
         }}
-        className=" bg-[#FF3044] rounded-[32px] w-[80%] h-[360px] xs:h-[385px] md:h-[500px] lg:h-[560px] transform -z-10"
+        className=" bg-[#FF3044] rounded-[32px] w-[80%] h-[360px] xs:h-[385px] min-[410px]:h-[370px] md:h-[500px] lg:h-[560px] transform -z-10"
       ></motion.div>
       <motion.div
         initial={{

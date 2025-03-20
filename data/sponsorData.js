@@ -37,7 +37,7 @@ export const normalSponsorsData = [
     sponsor: "GitHub",
     category: "Gold Sponsor",
     sponsorimgsrc: github,
-    site: "https://gh.io/hackbyte2",
+    site: "https://education.github.com/events?q=Hackbyte+",
   },
   {
     sponsor: "Postman",

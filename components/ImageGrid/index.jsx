@@ -13,36 +13,21 @@ import img8 from "@/public/ImageGallery/img8.webp";
 import img9 from "@/public/ImageGallery/img9.webp";
 import img10 from "@/public/ImageGallery/img10.jpg";
 import img11 from "@/public/ImageGallery/img11.jpg";
-import img12 from "@/public/ImageGallery/img12.jpg";
 import img13 from "@/public/ImageGallery/img13.jpg";
-import img14 from "@/public/ImageGallery/img14.jpg";
-import img15 from "@/public/ImageGallery/img15.jpg";
 import img16 from "@/public/ImageGallery/img16.jpg";
 import img17 from "@/public/ImageGallery/img17.jpg";
 import img18 from "@/public/ImageGallery/img18.jpg";
-import img19 from "@/public/ImageGallery/img19.jpg";
-import img20 from "@/public/ImageGallery/img20.jpg";
 import img21 from "@/public/ImageGallery/img21.jpg";
-import img22 from "@/public/ImageGallery/img22.jpg";
 import img23 from "@/public/ImageGallery/img23.jpg";
 import img24 from "@/public/ImageGallery/img24.jpg";
-import img25 from "@/public/ImageGallery/img25.jpg";
 import img26 from "@/public/ImageGallery/img26.jpg";
 import img27 from "@/public/ImageGallery/img27.jpg";
-import img28 from "@/public/ImageGallery/img28.jpg";
 import img29 from "@/public/ImageGallery/img29.jpg";
-import img30 from "@/public/ImageGallery/img30.jpg";
 import img31 from "@/public/ImageGallery/img31.jpg";
-import img32 from "@/public/ImageGallery/img32.jpg";
-import img33 from "@/public/ImageGallery/img33.jpg";
 import img34 from "@/public/ImageGallery/img34.jpg";
 import img35 from "@/public/ImageGallery/img35.jpg";
-import img36 from "@/public/ImageGallery/img36.jpg";
 import img37 from "@/public/ImageGallery/img37.jpg";
 import img38 from "@/public/ImageGallery/img38.jpg";
-
-
-
 
 const GridImage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -79,9 +64,25 @@ const GridImage = () => {
     </button>
   );
 
+  const images = [img1, img2, img3, img4, img9, img6, img7, img21, img5];
+
   return (
     <>
-      <div className="w-8xl mx-auto flex relative overflow-hidden transform-gpu">
+      {/* Grid layout for mobile screens */}
+      <div className="grid grid-cols-1 gap-4 p-4 md:hidden">
+        {images.map((img, index) => (
+          <Image
+            key={index}
+            src={img}
+            alt={`Image ${index + 1}`}
+            className="w-full h-auto rounded-lg object-cover"
+            placeholder="blur"
+          />
+        ))}
+      </div>
+
+      {/* Grid layout for desktop screens */}
+      <div className="w-8xl mx-auto relative overflow-hidden transform-gpu hidden md:flex">
         <div
           className="w-full flex-shrink-0 flex justify-center items-center  mx-auto py-16 bg-pink-300/300 transition-transform duration-500 ease-in-out"
           style={{

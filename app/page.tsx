@@ -74,7 +74,7 @@ export default function Home() {
       icon: g3,
       title: "Form Team",
       description:
-        "Go solo or team up with 2-4 members; join our Discord to find teammates and get the latest updates!",
+        "Team up with 2-4 members; join our Discord to find teammates and get the latest updates!",
     },
     {
       icon: g4,
@@ -217,7 +217,7 @@ export default function Home() {
               <div className="text-base lg:text-base xl:text-lg monitor:text-xl font-normal text-supporting-darkGray md:max-w-64 lg:max-w-[500px] leading-[1.5rem]">
                 We follow the MLH <Link
                   href="https://mail.mlh.io/e/c/eyJlbWFpbF9pZCI6ImRnU2lwd2tCQU11SERzcUhEZ0dWSHZKeG9wTzFtUmNmM3Rad01CST0iLCJocmVmIjoiaHR0cHM6Ly9tbGguaW8vY29kZS1vZi1jb25kdWN0P3V0bV9jYW1wYWlnbj1NZW1iZXIrRXZlbnQrLStPbmJvYXJkaW5nK1JlbWluZGVyXHUwMDI2dXRtX2NvbnRlbnQ9T25ib2FyZGluZytOZWVkZWRcdTAwMjZ1dG1fbWVkaXVtPUVtYWlsXHUwMDI2dXRtX3NvdXJjZT1DdXN0b21lci5pbyIsImludGVybmFsIjoiYTJhNzA5MDdmYTllMDFjYjg3MGUiLCJsaW5rX2lkIjo0MzE1fQ/516fa2299b66f1a1234c527d474494f98067ddaf9622617db3ae85da8f3d985b"
-                  className="underline"
+                  className="underline decoration-white/60"
                   target="_blank"
                 >
                   Code of Conduct
