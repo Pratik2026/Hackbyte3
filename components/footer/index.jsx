@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Hackbyte3Logo from "../../public/FooterLogo/Hackbyte3Logo.png";
+import webdock from "../../public/FooterLogo/webdock_footer_logo.svg";
+import benq from "../../public/FooterLogo/benq_footer_logo.svg";
 import linkedIn from "../../public/FooterLogo/linkedin.svg";
 import instagram from "../../public/FooterLogo/instagram.svg";
 import twitter from "../../public/FooterLogo/twitter.svg";
@@ -22,12 +24,25 @@ const sidebarLinks = [
 const Footer = () => {
   return (
     <div className="md:overflow-hidden bg-[#161616]">
-      <div className="flex flex-col md:flex-row md:justify-between items-start md:items-start xl:mx-32 lg:mx-20 md:mx-12 mx-4 gap-6 md:gap-0">
-        <Image
-          src={Hackbyte3Logo}
-          alt="TPCLogo"
-          className="monitor:w-[38rem] xl:w-[30rem] lg:w-[24rem] w-[20rem] pt-4"
-        />
+      <div className="flex flex-col md:flex-row md:justify-between items-start md:items-start xl:mx-32 lg:mx-20 md:mx-12 mx-4 gap-6 md:gap-0 mt-12 mb-20">
+        <div className="flex items-center justify-center py-4 px-2 md:px-6 mt-6 w-full">
+          <Image
+            src={Hackbyte3Logo}
+            alt="HackByte 3.0"
+            className="xxs:h-16 xs:h-20 md:h-32 w-auto"
+          />
+
+          <div className="h-20 w-px bg-gray-500 mx-4"></div>
+          <div className="flex flex-col w-full">
+            <div className="text-white text-base font-semibold">
+              Powered by
+            </div>
+            <div className="flex items-center space-x-2 md:space-x-4 text-white">
+              <Image src={webdock} alt="Webdock" className="xxs:h-4 xs:h-6 md:h-12" />
+              <Image src={benq} alt="BenQ" className="xxs:h-7 xs:h-8 md:h-14" />
+            </div>
+          </div>
+        </div>
         <div className="flex flex-col gap-2 justify-start items-start md:items-end pt-8 md:pt-16 w-full">
           <div className="text-right text-supporting-lightGray monitor:text-6xl xl:text-5xl text-3xl xs:text-4xl font-bold w-full">
             <AnimatedTitle viewport={true}>Hack the Protocol</AnimatedTitle>
@@ -38,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between items-end md:items-center xl:px-32 lg:px-10 md:px-1 px-0 mt-8 bg-[#FF3044] rotate-3">
+      <div className="flex flex-col md:flex-row justify-between items-end md:items-center xl:px-32 lg:px-10 md:px-1 px-0 mt-8 bg-[#FF3044] rotate-2">
         <div className="flex flex-wrap justify-evenly xs:justify-start lg:gap-4 monitor:gap-12 xl:gap-8 gap-0 md:my-4 hover:items-start text-supporting-lightGray">
           {sidebarLinks.map((link) => (
             <Link

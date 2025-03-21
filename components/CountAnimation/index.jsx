@@ -36,7 +36,7 @@ export default function CountAnimation({ targetValue }) {
       <motion.p className="font-black text-xl md:text-4xl lg:text-6xl xl:text-7xl text-white">
         {rounded}
       </motion.p>
-      <p className="font-black text-xl md:text-4xl lg:text-6xl xl:text-7xl text-white">
+      <p className={`font-black text-xl md:text-4xl lg:text-6xl xl:text-7xl text-white ${targetValue > 400 ? "hidden": "block"}`}>
         +
       </p>
     </div>
