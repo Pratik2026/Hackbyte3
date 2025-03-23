@@ -84,25 +84,25 @@ export const normalSponsorsData = [
     sponsor: "Mongo DB",
     category: "Track Sponsor",
     sponsorimgsrc: mongoDB,
-    site: "https://www.mongodb.com/",
+    site: "https://mlh.link/mongodb",
   },
   {
     sponsor: "Midnight",
     category: "Track Sponsor",
     sponsorimgsrc: midnight,
-    site: "https://midnight.network/",
+    site: "https://mlh.link/midnight",
   },
   {
     sponsor: "Cloudflare",
     category: "Track Sponsor",
     sponsorimgsrc: cloudflare,
-    site: "https://www.cloudflare.com/",
+    site: "https://mlh.link/cloudflare",
   },
   {
     sponsor: "Google Cloud",
     category: "Track Sponsor",
     sponsorimgsrc: googlecloud,
-    site: "https://cloud.google.com/apis",
+    site: "https://mlh.link/gemini-quickstart",
   },
 ];
 
