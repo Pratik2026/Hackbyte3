@@ -110,13 +110,13 @@ export const normalSponsorsData = [
     sponsor: "Duality AI",
     category: "Track Sponsor",
     sponsorimgsrc: duality,
-    site: "https://www.duality.ai/",
+    site: "https://drive.google.com/file/d/1J01l00y-GOsaxJKVfYh4khC2AuI1Q2K7/view?usp=sharing",
   },
   {
     sponsor: "Wikimedia",
     category: "Track Sponsor",
     sponsorimgsrc: wikimedia,
-    site: "https://www.wikimedia.org/",
+    site: "https://docs.google.com/document/d/1weLAj2gewHAQsK7qIvuBkq5CLKp6lHv7cR7sfrdIGlU/edit?usp=sharing",
   },
 ];
 

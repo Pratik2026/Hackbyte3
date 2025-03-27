@@ -84,7 +84,7 @@ const PrizeSection = () => {
       gradientColors:
         "from-[#D76835]/30 via-[#D76835]/40 to-transparent to-85%",
       gradientClasses: "clip-trapezium",
-      textColor: "text-[#FFAE0C]",
+      textColor: "text-[#D76835]",
     },
   ];
 

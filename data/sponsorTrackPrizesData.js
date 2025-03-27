@@ -41,7 +41,7 @@ export const sponsorTrackPrizesData = [
   {
     prizeimgsrc: duality,
     prizeTitle: "Duality AI - Space Station Challenge",
-    prize: "upto $300 worth amazon gift card",
+    prize: "$300 worth amazon gift card",
     link: "https://drive.google.com/file/d/1J01l00y-GOsaxJKVfYh4khC2AuI1Q2K7/view?usp=sharing",
     prizeDescription:
       "Duality AI, a leader in high-fidelity digital twin simulations, is bringing AI to space with the Space Station Object Detection Challenge. Train a YOLOv8 model to detect toolboxes, oxygen tanks, fire extinguishers, and more in a simulated space station environment. Work with high-quality synthetic data from the Falcon platform and tackle real-world challenges like tricky lighting, occlusions, and dynamic camera angles. It's a chance to push AI's limits, fine-tune model accuracy, and explore the future of digital twin technology. Ready to take on the challenge? ",
@@ -49,7 +49,7 @@ export const sponsorTrackPrizesData = [
   {
     prizeimgsrc: wikimedia,
     prizeTitle: "Gamify the onboarding experience of Wikipedia editors",
-    prize: "upto Rs 15000 worth Cash Prize",
+    prize: "Rs 15000 Cash Prize",
     link: "https://docs.google.com/document/d/1weLAj2gewHAQsK7qIvuBkq5CLKp6lHv7cR7sfrdIGlU/edit?usp=sharing",
     prizeDescription:
       "Wikipedia is an open platform where anyone can contribute, but navigating its policies and guidelines can be overwhelming for newcomers. This sponsor track challenges participants to gamify the Wikipedia editor onboarding experience that helps new Wikipedia editors learn essential rules and guidelines in a structured, intuitive, and enjoyable way. The goal for the hackathon is not to build the complete game, but for you to explore the idea of gamifying a learning experience (which is a huge space in itself in the market, like Duolingo). Focus on how to best present the information, breaking it down into steps and presenting it to the user, and having fun quizzes, surveys etc. along the way.",

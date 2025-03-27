@@ -32,8 +32,7 @@ export default function Prizes() {
           <div className="flex justify-between px-4 md:px-16 lg:px-28 monitor:px-32">
             <div className="flex flex-col items-start gap-2">
               <p className="text-supporting-lightGray text-[36px] xs:text-[3rem] md:text-[3.5rem] lg:text-[5rem] xl:text-[6rem] leading-tight font-black max-w-[95%]">
-                Prizes for the
-                Winners
+                Prizes for the Winners
               </p>
               <div className="flex flex-col items-start gap-3 md:gap-4">
                 <p
@@ -44,14 +43,14 @@ export default function Prizes() {
                   monetary prizes will be split equally among the winning team
                   members.
                 </p>
-                {/* <div className="rounded-full border bg-[#333333] border-[#D1CAC7] px-4 py-1">
+                <div className="rounded-full border bg-[#333333] border-[#D1CAC7] px-4 py-1">
                   <p
                     className="w-full text-supporting-mediumGray
                   text-center text-[1rem] md:text-[1.5rem]"
                   >
                     Winners will also get MLH winner pins 🌟
                   </p>
-                </div> */}
+                </div>
               </div>
             </div>
             <Image
@@ -70,12 +69,15 @@ export default function Prizes() {
               >
                 <Image src={cup4} alt="cup" className="w-[4.7rem] h-[4.7rem]" />
                 <div className="w-full flex flex-col items-center md:items-start gap-2">
-                  <p className="text-[#fff] text-[1.5rem] xs:text-[2rem] font-bold">
+                  <p className="text-[#fff] text-[2rem] font-bold">
                     Best Girls Team
+                  </p>
+                  <p className="text-[#EFA685] text-[1.5rem] font-semibold">
+                    ₹5,000 Cash Prize
                   </p>
                   <p
                     className="text-[#FFA5AE] font-normal text-[1.25rem] 
-                      text-center md:text-left"
+      text-center md:text-left"
                   >
                     Best performing All-Girls Team at HackByte
                   </p>
@@ -87,12 +89,15 @@ export default function Prizes() {
               >
                 <Image src={cup4} alt="cup" className="w-[4.7rem] h-[4.7rem]" />
                 <div className="w-full flex flex-col items-center md:items-start gap-2">
-                  <p className="text-[#fff] text-[1.5rem] xs:text-[2rem] font-bold">
+                  <p className="text-[#fff] text-[2rem] font-bold">
                     First Time Hacking?
+                  </p>
+                  <p className="text-[#EFA685] text-[1.5rem] font-semibold">
+                    ₹5,000 Cash Prize
                   </p>
                   <p
                     className="text-[#FFA5AE] font-normal text-[1.25rem] 
-                      text-center md:text-left"
+      text-center md:text-left"
                   >
                     For freshmen and novices
                   </p>
@@ -111,7 +116,9 @@ export default function Prizes() {
             className="w-full xl:max-w-[85%] text-supporting-mediumGray
           md:text-xl lg:text-2xl text-lg xs:text-md font-medium mb-8 sm:mb-12"
           >
-            Explore our sponsor tracks and leverage their technologies to bring your projects to life! All monetary prizes will be split equally among the winning team members.
+            Explore our sponsor tracks and leverage their technologies to bring
+            your projects to life! All monetary prizes will be split equally
+            among the winning team members.
           </p>
           <div
             className="w-full xl:max-w-[95%] monitor:max-w-[90%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 
