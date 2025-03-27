@@ -12,6 +12,8 @@ import midnight from "@/public/partnersPage/midnight.png";
 import cloudflare from "@/public/partnersPage/cloudflare.png";
 import googlecloud from "@/public/partnersPage/googlecloud.png";
 import unsloth from "@/public/partnersPage/unsloth.png";
+import duality from "@/public/partnersPage/duality.png";
+import wikimedia from "@/public/partnersPage/wikimedia.png";
 
 // In Kind Sponsors
 import codecrafters from "@/public/partnersPage/codecrafters.jpg";
@@ -103,6 +105,18 @@ export const normalSponsorsData = [
     category: "Track Sponsor",
     sponsorimgsrc: googlecloud,
     site: "https://mlh.link/gemini-quickstart",
+  },
+  {
+    sponsor: "Duality AI",
+    category: "Track Sponsor",
+    sponsorimgsrc: duality,
+    site: "https://www.duality.ai/",
+  },
+  {
+    sponsor: "Wikimedia",
+    category: "Track Sponsor",
+    sponsorimgsrc: wikimedia,
+    site: "https://www.wikimedia.org/",
   },
 ];
 

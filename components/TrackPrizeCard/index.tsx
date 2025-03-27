@@ -31,9 +31,7 @@ const TrackPrizeCard: React.FC<TrackPrizeCardProps> = ({
     <>
       <AnimatedTitle delay={0.2} viewport={true}>
         <div className="flex justify-center">
-          <div
-            className="w-full font-gotham text-white hover:scale-105 transition-all ease-in-out duration-500 max-w-[350px] md:w-[310px] lg:w-[330px] xl:w-[355px]"
-          >
+          <div className="w-full font-gotham text-white hover:scale-105 transition-all ease-in-out duration-500 max-w-[350px] md:w-[310px] lg:w-[330px] xl:w-[355px]">
             <Link href={link} target="_blank" rel="noreferrer" key={index}>
               <Image
                 src={prizeimgsrc}
@@ -43,41 +41,45 @@ const TrackPrizeCard: React.FC<TrackPrizeCardProps> = ({
               />
               <div className="flex justify-between items-start pt-[22px]">
                 <div className="flex flex-col">
-                  <p className="sm:text-[24px] text-xl font-black my-[4px] sm:h-[68px]">
+                  <p
+                    className={`${
+                      prizeTitle.length > 45 ? "sm:text-xl" : "sm:text-2xl"
+                    } text-xl font-black my-[4px] sm:h-[68px]`}
+                  >
                     {prizeTitle}
                   </p>
                   <p className="sm:text-[20px] text-xl font-black sm:h-[48px] text-[#FF939E]">
-                    {prize}
+                    {prize.split(". ").map((sentence, index) => (
+                      <span key={index}>
+                        {sentence}.
+                        <br />
+                      </span>
+                    ))}
                   </p>
                 </div>
               </div>
             </Link>
-            <p className="sm:text-[16px] text-lg text-[#BBBBBB] mt-2">
-              {isExpanded
-                ? prizeDescription
-                : `${prizeDescription.slice(0, 150)}...`}
-              
-              {
-                isExpanded ? (
-                  <>
-                    <br></br>
-                    <button
-                      onClick={toggleDescription}
-                      className="font-bold underline"
-                    >
-                      Read less
-                    </button>
-                  </>
-                ) : (
-                  <button
-                    onClick={toggleDescription}
-                    className="font-bold underline"
-                  >
-                    Read more
-                  </button>
-                )
-              }
-            </p>
+
+            {/* Description with smooth transition */}
+            <div
+              className={`sm:text-[16px] text-lg text-[#BBBBBB] mt-2 transition-all duration-1000 ease-in-out ${
+                isExpanded ? "overflow-y-scroll" : "overflow-hidden"
+              } sm:overflow-hidden ${
+                isExpanded
+                  ? "max-h-[250px] sm:max-h-[500px] opacity-100"
+                  : "sm:max-h-[80px] max-h-[135px] opacity-80"
+              }`}
+            >
+              {prizeDescription}
+            </div>
+
+            {/* Read more / Read less button */}
+            <button
+              onClick={toggleDescription}
+              className="font-bold underline transition-all duration-300 hover:opacity-80 mt-1"
+            >
+              {isExpanded ? "Read less" : "Read more"}
+            </button>
           </div>
         </div>
       </AnimatedTitle>

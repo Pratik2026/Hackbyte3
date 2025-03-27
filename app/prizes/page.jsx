@@ -115,7 +115,7 @@ export default function Prizes() {
           </p>
           <div
             className="w-full xl:max-w-[95%] monitor:max-w-[90%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 
-              gap-8 lg:gap-[44px]"
+              gap-12 sm:gap-8 lg:gap-[44px]"
           >
             {sponsorTrackPrizesData.map((sponsor, index) => {
               return <TrackPrizeCard key={index} index={index} {...sponsor} />;
