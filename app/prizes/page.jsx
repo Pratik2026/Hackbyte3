@@ -89,7 +89,7 @@ export default function Prizes() {
               >
                 <Image src={cup4} alt="cup" className="w-[4.7rem] h-[4.7rem]" />
                 <div className="w-full flex flex-col items-center md:items-start gap-2">
-                  <p className="text-[#fff] text-[2rem] font-bold">
+                  <p className="text-[#fff] text-[2rem] font-bold text-center">
                     First Time Hacking?
                   </p>
                   <p className="text-[#EFA685] text-[1.5rem] font-semibold">
@@ -117,8 +117,7 @@ export default function Prizes() {
           md:text-xl lg:text-2xl text-lg xs:text-md font-medium mb-8 sm:mb-12"
           >
             Explore our sponsor tracks and leverage their technologies to bring
-            your projects to life! All monetary prizes will be split equally
-            among the winning team members.
+            your projects to life!
           </p>
           <div
             className="w-full xl:max-w-[95%] monitor:max-w-[90%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 

@@ -49,7 +49,7 @@ export const sponsorTrackPrizesData = [
   {
     prizeimgsrc: wikimedia,
     prizeTitle: "Gamify the onboarding experience of Wikipedia editors",
-    prize: "Rs 15000 Cash Prize",
+    prize: "₹15000 Cash Prize",
     link: "https://docs.google.com/document/d/1weLAj2gewHAQsK7qIvuBkq5CLKp6lHv7cR7sfrdIGlU/edit?usp=sharing",
     prizeDescription:
       "Wikipedia is an open platform where anyone can contribute, but navigating its policies and guidelines can be overwhelming for newcomers. This sponsor track challenges participants to gamify the Wikipedia editor onboarding experience that helps new Wikipedia editors learn essential rules and guidelines in a structured, intuitive, and enjoyable way. The goal for the hackathon is not to build the complete game, but for you to explore the idea of gamifying a learning experience (which is a huge space in itself in the market, like Duolingo). Focus on how to best present the information, breaking it down into steps and presenting it to the user, and having fun quizzes, surveys etc. along the way.",

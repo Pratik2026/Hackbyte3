@@ -100,9 +100,9 @@ const Schedule = () => {
             <TabsContent value="Day 1">
               <div className="w-full flex flex-col sm:flex-row justify-between sm:items-center py-8 font-gotham font-black text-white">
                 <div className="text-[28px] xs:text-[32px] sm:text-[48px] lg:text-[64px] text-nowrap">4th April</div>
-                <div className="text-supporting-mediumGray text-[20px] xs:text-[24px] sm:text-[28px] lg:text-[32px]">
+                {/* <div className="text-supporting-mediumGray text-[20px] xs:text-[24px] sm:text-[28px] lg:text-[32px]">
                   Hacking Time: 3.5 Hours
-                </div>
+                </div> */}
               </div>
               <EventFlowBox
                 h="256px"
@@ -167,9 +167,9 @@ const Schedule = () => {
             <TabsContent value="Day 2">
               <div className="w-full flex flex-col sm:flex-row justify-between sm:items-center py-8 font-gotham font-black text-white">
                 <div className="text-[28px] xs:text-[32px] sm:text-[48px] lg:text-[64px] text-nowrap">5th April</div>
-                <div className="text-supporting-mediumGray text-[20px] xs:text-[24px] sm:text-[28px] lg:text-[32px]">
+                {/* <div className="text-supporting-mediumGray text-[20px] xs:text-[24px] sm:text-[28px] lg:text-[32px]">
                   Hacking Time: 14.5 Hours
-                </div>
+                </div> */}
               </div>
 
               <EventFlowBox
@@ -183,7 +183,7 @@ const Schedule = () => {
                 h="100px"
                 bgColor="#FFC20C"
                 time="1:30 AM"
-                title="MINI Event - SLOT 1"
+                title="MINI Event"
                 description="L104/L105, LHTC (Lecture Hall)"
               />
               <EventFlowBox
@@ -219,7 +219,7 @@ const Schedule = () => {
                 h="150px"
                 bgColor="#FFC20C"
                 time="8:30 AM"
-                title="Workshop/Session - SLOT 2"
+                title="MLH Workshop"
                 description="L104/L105, LHTC (Lecture Hall)"
               />
               <EventFlowBox
@@ -261,7 +261,7 @@ const Schedule = () => {
                 h="100px"
                 bgColor="#FFC20C"
                 time="6:00 PM"
-                title="Workshop/Session - SLOT 3"
+                title="Github Workshop"
                 description="L104/L105, LHTC (Lecture Hall)"
               />
               <EventFlowBox
@@ -299,9 +299,9 @@ const Schedule = () => {
             <TabsContent value="Day 3">
               <div className="w-full flex flex-col sm:flex-row justify-between sm:items-center py-8 font-gotham font-black text-white">
                 <div className="text-[28px] xs:text-[32px] sm:text-[48px] lg:text-[64px] text-nowrap">6th April</div>
-                <div className="text-supporting-mediumGray text-[20px] xs:text-[24px] sm:text-[28px] lg:text-[32px]">
+                {/* <div className="text-supporting-mediumGray text-[20px] xs:text-[24px] sm:text-[28px] lg:text-[32px]">
                   Hacking Time: 2.5 Hours
-                </div>
+                </div> */}
               </div>
               <EventFlowBox
                 h="150px"
@@ -314,7 +314,7 @@ const Schedule = () => {
                 h="100px"
                 bgColor="#FF3044"
                 time="1:30 AM"
-                title="MINI Event - SLOT 4"
+                title="MINI Event"
                 description="L104/L105, LHTC (Lecture Hall)"
               />
               <EventFlowBox
@@ -386,7 +386,7 @@ const Schedule = () => {
                 bgColor="#0275F6"
                 time="2:30 PM"
                 title="Closing Ceremony & Result Declaration"
-                description="Mess, Hostel Area"
+                description="Auditorium(L-103), LHTC (Lecture Hall)"
               />
               <div className="font-bold text-2xl text-supporting-lightGr min-w-[116px] text-white">
                 4:00 PM
