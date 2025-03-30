@@ -4,6 +4,7 @@ import midnight from "@/public/prizesPageLogo/midnight.png";
 import googlecloud from "@/public/prizesPageLogo/googlecloud.png";
 import duality from "@/public/prizesPageLogo/duality.png";
 import wikimedia from "@/public/prizesPageLogo/wikimedia.png";
+import github from "@/public/partnersPage/github.jpg";
 
 export const sponsorTrackPrizesData = [
   {
@@ -53,5 +54,13 @@ export const sponsorTrackPrizesData = [
     link: "https://docs.google.com/document/d/1weLAj2gewHAQsK7qIvuBkq5CLKp6lHv7cR7sfrdIGlU/edit?usp=sharing",
     prizeDescription:
       "Wikipedia is an open platform where anyone can contribute, but navigating its policies and guidelines can be overwhelming for newcomers. This sponsor track challenges participants to gamify the Wikipedia editor onboarding experience that helps new Wikipedia editors learn essential rules and guidelines in a structured, intuitive, and enjoyable way. The goal for the hackathon is not to build the complete game, but for you to explore the idea of gamifying a learning experience (which is a huge space in itself in the market, like Duolingo). Focus on how to best present the information, breaking it down into steps and presenting it to the user, and having fun quizzes, surveys etc. along the way.",
+  },
+  {
+    prizeimgsrc: github,
+    prizeTitle: "Mastering GitHub: Beyond Code Storage",
+    prize: "Mona(Octocat) Figurine",
+    link: "https://docs.google.com/document/d/1u486dNmaO9Mu5exsvw1v1alxG-SdTeg_NZOlyaLp8zo/edit?usp=sharing",
+    prizeDescription:
+      "GitHub is more than just a place to store code. It's a hub for collaboration, version control, and automation. This track recognizes teams that make the most of GitHub's features to manage their projects throughout the hackathon. A well-structured repository with a clear README lets your work speak for itself. Use branches, pull requests, issues, and labels to collaborate. A clean commit history, along with GitHub Pages, GitHub Actions, or any other tool that enhances your workflow, can set your project apart. There are no limits, so, explore, experiment, and make GitHub work for you.",
   },
 ];

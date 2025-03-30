@@ -44,7 +44,7 @@ const TrackPrizeCard: React.FC<TrackPrizeCardProps> = ({
                   <p
                     className={`${
                       prizeTitle.length > 45 ? "sm:text-xl" : "sm:text-2xl"
-                    } text-xl font-black my-[4px] sm:h-[68px]`}
+                    } text-xl font-black my-[4px] sm:h-[68px] underline`}
                   >
                     {prizeTitle}
                   </p>
