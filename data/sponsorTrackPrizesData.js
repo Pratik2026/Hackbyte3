@@ -4,7 +4,7 @@ import midnight from "@/public/prizesPageLogo/midnight.png";
 import googlecloud from "@/public/prizesPageLogo/googlecloud.png";
 import duality from "@/public/prizesPageLogo/duality.png";
 import wikimedia from "@/public/prizesPageLogo/wikimedia.png";
-import github from "@/public/partnersPage/github.jpg";
+import github from "@/public/prizesPageLogo/github.png";
 
 export const sponsorTrackPrizesData = [
   {

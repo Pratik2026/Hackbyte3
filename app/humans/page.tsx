@@ -65,11 +65,11 @@ const Humans = () => {
               Organizers
             </TabsTrigger>
             <TabsTrigger
-              value="Past Mentors"
+              value="Mentors"
               className="sm:text-xl text-md font-bold text-supporting-mediumGray 
                          sm:py-2 sm:px-5 p-2 rounded-[8px]"
             >
-              Past Mentors
+              Mentors
             </TabsTrigger>
             <TabsTrigger
               value="Elders"
@@ -95,7 +95,7 @@ const Humans = () => {
               ))}
             </div>
           </TabsContent>
-          <TabsContent value="Past Mentors">
+          <TabsContent value="Mentors">
             <div
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
                 place-content-center place-items-center gap-10"
