@@ -40,7 +40,7 @@ const PartnersPage = () => {
       description:
         "BenQ is a world-leading human technology and solutions provider driven by the corporate vision of 'Bringing Enjoyment ‘N’ Quality to Life' to elevate and enrich the aspects of life that matter most to people today – lifestyle, business, healthcare, and education.",
       imageSrc: benq,
-      link: "https://www.benq.com/en-in/index.html",
+      link: "https://www.benq.com/en-in/campaign/best-coding-monitor-for-programmers.html?utm_source=event&utm_medium=referral&utm_campaign=wed_programming_webtraffic_others_programming%20series_hackbyte_traffic_202504",
     },
   ];
   return (
