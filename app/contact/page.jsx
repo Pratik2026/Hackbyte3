@@ -4,9 +4,27 @@ import Image from "next/image";
 import Link from "next/link";
 import phoneImg from "@/public/Contact/phone.png";
 
+export const metadata = {
+  title: "Contact | HackByte",
+  description:
+    "Connect with us at HackByte! Reach out for assistance, questions, or just to say hello. Find information on reaching IIIT Jabalpur, including travel options.",
+  keywords: "contact, hackbyte, reach us, get in touch",
+  openGraph: {
+    title: "Contact | HackByte",
+    description:
+      "Connect with us at HackByte! Reach out for assistance, questions, or just to say hello. Find information on reaching IIIT Jabalpur, including travel options.",
+    url: "https://hackbyte.in/contact",
+    images:
+      "https://res.cloudinary.com/dlsqbiwug/image/upload/v1736876616/Frame_463_zdbkgu.png",
+    siteName: "HackByte - IIITDMJ Hackathon",
+    type: "website",
+    locale: "en_US",
+  },
+};
+
 export default function ContactSection() {
   return (
-    <div className="w-full text-primary-white p-6 md:p-12 lg:p-20 md:py-16">
+    <div className="w-full text-primary-white p-6 md:p-12 lg:p-20 md:py-16 pt-[32px] sm:pt-[48px]">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="flex items-start justify-between pb-8 md:pb-16">
           <div className="space-y-4">
@@ -22,24 +40,29 @@ export default function ContactSection() {
                   alt="phone"
                   height={100}
                   width={100}
+                  className="hidden sm:block"
                 />
               </div>
             </div>
 
-            <p className="text-supporting-mediumGray text-xl font-medium max-w-lg md:max-w-xl lg:max-w-2xl xl:maw-w-3xl">
+            <p className="text-supporting-mediumGray xxs:text-lg md:text-xl font-medium max-w-lg md:max-w-xl lg:max-w-2xl xl:maw-w-3xl">
               Hacker Experience is what we prioritize! Have questions, need
               assistance, or just want to connect? Feel free to reach out!
             </p>
           </div>
           <div className="hidden md:block mx-auto">
-            <Image src={phoneImg} alt="phone"  className="md:w-[168px] lg:w-[200px] xl:w-[220px]" />
+            <Image
+              src={phoneImg}
+              alt="phone"
+              className="md:w-[168px] lg:w-[200px] xl:w-[220px]"
+            />
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-2">
             <h2 className="text-3xl md:text-4xl font-black">Call Us</h2>
-            <div className="flex flex-col md:flex-row gap-8 text-supporting-mediumGray font-medium">
+            <div className="flex flex-row gap-8 text-supporting-mediumGray font-medium">
               <div>
                 <p>+91 98692 61132</p>
                 <p className="text-base text-supporting-mediumGray font-medium">
@@ -55,11 +78,11 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 hidden ">
             <h2 className="text-3xl md:text-4xl font-black">Mail Us</h2>
             <div className="space-y-1 flex flex-col text-supporting-mediumGray font-medium">
-              <Link target="_blank" href={"mailto:theprogclub@iiitdmj.ac.in"}>
-                theprogclub@iiitdmj.ac.in
+              <Link target="_blank" href={"mailto:hackbyte@iiitdmj.ac.in"}>
+                hackbyte@iiitdmj.ac.in
               </Link>
             </div>
           </div>
@@ -74,7 +97,9 @@ export default function ContactSection() {
         </div>
 
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl xl:text-5xl font-black">Reaching IIITDM Jabalpur</h2>
+          <h2 className="text-3xl md:text-4xl xl:text-5xl font-black">
+            Reaching IIITDM Jabalpur
+          </h2>
           <div className="aspect-video w-full rounded-3xl overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.4774721298!2d80.02231931544636!3d23.176386884867444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981ae1a0fb6a97d%3A0x44020f94f795d69f!2sIIITDM%20Jabalpur!5e0!3m2!1sen!2sin!4v1629789876543!5m2!1sen!2sin"

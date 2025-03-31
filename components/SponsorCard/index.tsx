@@ -1,7 +1,6 @@
-"use client";
-
 import Image, { StaticImageData } from "next/image";
-import { motion } from "framer-motion";
+import Link from "next/link";
+import AnimatedTitle from "@/components/AnimatedTitle";
 
 interface SponsorCardProps {
   index: number;
@@ -39,6 +38,10 @@ const SponsorCard: React.FC<SponsorCardProps> = ({
       bgColor: "#463026",
       textColor: "#E49977",
     },
+    "Platform Partner": {
+      bgColor: "#483869",
+      textColor: "#C1A5FF",
+    },
   };
 
   const bgColor = sponsorColor[category]?.bgColor ?? defaultBgColor;
@@ -46,22 +49,12 @@ const SponsorCard: React.FC<SponsorCardProps> = ({
 
   return (
     <>
-      <motion.div
-        className="card"
-        initial={{ opacity: 0 }}
-        whileInView={{
-          opacity: 1,
-          transition: {
-            duration: 1,
-          },
-        }}
-        viewport={{ once: true }}
-      >
-        <a href={site} target="_blank" rel="noreferrer" key={index}>
-          <div className="w-full text-white hover:scale-105 duration-300 max-w-[400px]">
+      <AnimatedTitle delay={0.2} viewport={true}>
+        <Link href={site} target="_blank" rel="noreferrer" key={index} className="flex justify-center">
+          <div className={`w-full font-gotham text-white ${index % 3 == 0 ? "hover:-rotate-3" : "hover:rotate-3"} hover:scale-105 transition-all ease-in-out duration-500 max-w-[350px] md:w-[310px] lg:w-[330px] xl:w-[355px]`}>
             <Image
               src={sponsorimgsrc}
-              className="w-full h-[181px] xl:h-[216px] rounded-t-[20px] outline-none"
+              className="w-full h-[181px] xl:h-[216px] rounded-t-[20px] outline-none object-cover"
               placeholder="blur"
               alt={sponsor}
             />
@@ -80,8 +73,8 @@ const SponsorCard: React.FC<SponsorCardProps> = ({
               </div>
             </div>
           </div>
-        </a>
-      </motion.div>
+        </Link>
+      </AnimatedTitle>
     </>
   );
 };

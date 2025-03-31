@@ -23,7 +23,7 @@ const SocialMediaIcon = ({ Icon, href }: SocialMediaIconProps) => (
   >
     <Icon
       className="w-7 h-7 bg-[#161616] text-supporting-darkGray transition ease-in-out delay-150 
-		hover:scale-125 duration-300"
+		hover:scale-125 duration-300 rounded-md"
     />
   </Link>
 );
@@ -36,6 +36,7 @@ interface HumansCardProps {
   linkedin: string;
   twitter: string;
   github: string;
+  behance?: string;
 }
 
 const HumansCard: React.FC<HumansCardProps> = ({
@@ -45,6 +46,7 @@ const HumansCard: React.FC<HumansCardProps> = ({
   linkedin,
   twitter,
   github,
+  behance
 }: HumansCardProps) => {
   return (
     <>
@@ -66,11 +68,11 @@ const HumansCard: React.FC<HumansCardProps> = ({
           <div className="flex gap-6">
             <SocialMediaIcon href={linkedin} Icon={LinkedInLogoIcon} />
             <SocialMediaIcon href={twitter} Icon={TwitterLogoIcon} />
-            {name !== "Aditya Raj" ? (
+            { !behance ? (
               <SocialMediaIcon href={github} Icon={GitHubLogoIcon} />
             ) : (
-              <a
-                href="https://www.behance.net/adi_ux"
+              <Link
+                href={behance}
                 target="_blank"
                 rel="noopener"
                 title="Behance Profile"
@@ -80,7 +82,7 @@ const HumansCard: React.FC<HumansCardProps> = ({
                   className="w-7 h-7"
                   alt="Behance Logo"
                 />
-              </a>
+              </Link>
             )}
           </div>
         </div>

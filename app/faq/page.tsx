@@ -7,6 +7,24 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import faq from "@/public/Faq/question_mark.png";
+import Link from "next/link";
+import AnimatedTitle from "@/components/AnimatedTitle";
+
+export const metadata = {
+  title: "FAQ | HackByte",
+  description: "Frequently asked questions about HackByte.",
+  keywords: "FAQ, HackByte, IIITDMJ, Hackathon",
+  openGraph: {
+    title: "FAQ | HackByte",
+    description: "Frequently asked questions about HackByte.",
+    url: "https://hackbyte.in/faq",
+    images:
+      "https://res.cloudinary.com/dlsqbiwug/image/upload/v1736876616/Frame_463_zdbkgu.png",
+    siteName: "HackByte - IIITDMJ Hackathon",
+    type: "website",
+    locale: "en_US",
+  },
+};
 
 const faqs = [
   {
@@ -14,9 +32,9 @@ const faqs = [
     answer: "Pre-registration will be opening in January 2025",
   },
   {
-    question: "How many team members do I need ?",
+    question: "How many team members do I need?",
     answer:
-      "You can participate individually or in teams of 2 to 4 members. If you are participating in the hackathon individually and looking for a team, we will help you in connecting to other individual participants to get you a team.",
+      "You can participate only in teams of 2 to 4 members. If you are interested in participating in the hackathon but do not have a team, we will assist you in connecting with other individual participants to form a team.",
   },
   {
     question: "How much are the participation fees?",
@@ -49,22 +67,27 @@ const faqs = [
     answer:
       "Yes, your friend can join the team by submitting an individual application. Once both your friend's individual application and your team's application are accepted, you will be able to add your friend to the team.",
   },
+  {
+    question: "Can we bring a pre-built project to the hackathon?",
+    answer:
+      "No, participants are not allowed to bring pre-built projects to the hackathon. All work must be started from scratch after the hackathon begins to ensure fairness",
+  },
+  {
+    question: "Do projects need to be related to the theme?",
+    answer:
+      "No. We want to encourage open innovation, so you're free to choose any idea you're passionate about and build something meaningful.",
+  },
 ];
 
 export default function FAQSection() {
   return (
-    <div className="min-h-screen text-primary-white p-6 md:p-12 lg:p-16 md:py-16">
+    <div className="min-h-screen text-primary-white p-6 md:p-12 lg:p-16 md:py-16 pt-[32px] sm:pt-[48px]">
       <div className="max-w-7xl mx-auto mb-24 md:mb-32">
         <div className="grid md:grid-cols-[2fr,1fr] gap-8 items-center">
           <div className="space-y-6 animate-in fade-in duration-500">
-            <div className="flex">
-              <h1 className="text-[42px] md:text-6xl lg:text-8xl font-black leading-tight max-w-64 md:max-w-3xl">
-                Everything you need to know!
-              </h1>
-              <div className="w-32 h-32 md:hidden relative mx-auto">
-                <Image src={faq} alt="" height={120} width={140} />
-              </div>
-            </div>
+            <h1 className="text-[42px] md:text-6xl lg:text-8xl font-black leading-tight max-w-64 md:max-w-3xl">
+              Everything you need to know!
+            </h1>
             <p className="text-supporting-mediumGray text-lg md:text-xl lg:text-xl xl:text-2xl font-medium md:max-w-lg lg:max-w-3xl">
               Hacker Experience is what we prioritize! Have questions, need
               assistance, or just want to connect? Feel free to reach out!
@@ -73,7 +96,7 @@ export default function FAQSection() {
           <Image
             src={faq}
             alt=""
-            className="hidden md:flex md:w-[200px] lg:w-[220px] lg:pb-28 xl:pb-0"
+            className="hidden md:flex md:w-[200px] lg:w-[220px] lg:pb-28 xl:pb-0 hover:-rotate-6 hover:scale-105 transition-all ease-in-out duration-500"
           />
         </div>
       </div>
@@ -88,34 +111,37 @@ export default function FAQSection() {
             </p>
             <div className="text-2xl font-bold">OR</div>
             <div className="space-y-2">
-              <p className="text-supporting-mediumGray">Think we missed something?</p>
+              <p className="text-supporting-mediumGray">
+                Think we missed something?
+              </p>
               <p className="text-supporting-mediumGray">Reach out at</p>
-              <a
-                href="mailto:theprogclub@iiitdmj.ac.in"
+              <Link
+                href="mailto:hackbyte@iiitdmj.ac.in"
                 className="inline-flex items-center gap-2 text-white hover:text-supporting-mediumGray transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                theprogclub@iiitdmj.ac.in
-              </a>
+                hackbyte@iiitdmj.ac.in
+              </Link>
             </div>
           </div>
         </div>
 
-        <div className="animate-in fade-in duration-500 delay-500 md:h-[750px] lg:h-[760px] xl:h-[800px]">
+        <div className="animate-in fade-in duration-500 delay-500 md:h-[750px] lg:h-[760px] xl:h-[900px]">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="border-b border-gray-800"
-              >
-                <AccordionTrigger className="text-lg md:text-xl xl:text-2xl text-supporting-mediumGray hover:text-white transition-colors text-left pr-4 font-bold">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-lg xl:text-xl text-supporting-mediumGray">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+              <AnimatedTitle key={index}>
+                <AccordionItem
+                  value={`item-${index}`}
+                  className="border-b border-gray-800"
+                >
+                  <AccordionTrigger className="text-base sm:text-lg md:text-xl xl:text-2xl text-supporting-mediumGray hover:text-white transition-colors text-left pr-4 font-bold">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base sm:text-lg  xl:text-xl text-supporting-mediumGray">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </AnimatedTitle>
             ))}
           </Accordion>
         </div>

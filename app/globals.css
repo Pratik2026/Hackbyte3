@@ -5,14 +5,11 @@
 @layer base {
   :root {
     /* This is for the dotted bg */
-    --dot-bg: #161616;
-    --dot-color: #848282;
-    --dot-size: 1.5px;
-    --dot-space: 50px;
+    background-color: #161616;
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 4px;
   }
 
   ::-webkit-scrollbar-track {
@@ -20,30 +17,22 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #777777;
+    background: #555555;
     border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #777777;
+    background: #555555;
   }
 
   body {
     @apply font-gotham;
-    background: linear-gradient(
-          90deg,
-          var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
-          transparent 1%
-        )
-        center / var(--dot-space) var(--dot-space),
-      linear-gradient(
-          var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
-          transparent 1%
-        )
-        center / var(--dot-space) var(--dot-space),
-      var(--dot-color);
+    overflow-x: hidden;
   }
 
+  .clip-trapezium {
+    clip-path: polygon(25% 0, 75% 0, 100% 100%, 0% 100%);
+  }
   .custom-border {
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='40' ry='40' stroke='%23777' stroke-width='6' stroke-dasharray='6%2c 20' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     border-radius: 40px;

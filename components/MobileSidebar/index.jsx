@@ -1,5 +1,5 @@
 "use client";
-import { useAnimate } from "framer-motion";
+import { useAnimate } from "motion/react";
 import closesidebar from "@/public/closesidebar.svg";
 import opensidebar from "@/public/opensidebar.svg";
 import {
@@ -13,7 +13,9 @@ import {
   Phone,
 } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 const sidebarLinks = [
   { name: "Home", icon: <House />, href: "/" },
   { name: "Gallery", icon: <Gallery />, href: "/gallery" },
@@ -26,17 +28,30 @@ const sidebarLinks = [
 ];
 
 const MobileSidebar = () => {
-  const [selectedName, setSelectedName] = useState("Home");
   const [fullyopen, setFullyopen] = useState(false);
   const [open, setOpen] = useState(false);
   const [scope, animate] = useAnimate();
+  const pathname = usePathname();
+  const sidebarRef = useRef(null);
+  const ishome = pathname === "/";
 
   useEffect(() => {
-    setSelectedName(
-      sidebarLinks.find((link) => link.href === window.location.pathname).name
-    );
-    console.log(selectedName);
-  }, []);
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
 
   useEffect(() => {
     const animateSidebar = async () => {
@@ -72,8 +87,18 @@ const MobileSidebar = () => {
   return (
     <>
       <div
-        ref={scope}
-        className="backdrop-blur-xl bg-[#222222] h-[48px] w-[48px] top-5 right-4 fixed rounded-[32px] z-10"
+        ref={(el) => {
+          scope.current = el; // For animations
+          sidebarRef.current = el; // For outside click detection
+        }}
+        className={`backdrop-blur-xl bg-[#222222] h-[48px] w-[48px] fixed rounded-[32px] z-50 ${
+          ishome ? "left-4 top-5 " : "right-4 top-5"
+        }`}
+        style={{
+          background: "rgba(34, 34, 34, 0.50)",
+          boxShadow: "0px 0px 80px 0px rgba(0, 0, 0, 0.15)",
+          backdropFilter: "blur(20px)",
+        }}
       >
         {open ? (
           <Image
@@ -83,21 +108,26 @@ const MobileSidebar = () => {
             className="absolute right-3 top-3"
           />
         ) : (
-          <Image alt="closesidebar" onClick={() => setOpen(!open)} src={closesidebar} />
+          <Image
+            alt="closesidebar"
+            onClick={() => setOpen(!open)}
+            src={closesidebar}
+          />
         )}
         {open && (
           <div className="flex-col justify-between h-full p-5 pt-14 flex overflow-hidden">
             {sidebarLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className={`flex gap-5  ${
-                  selectedName === link.name ? "text-white" : "text-white/40"
+                  pathname === link.href ? "text-white" : "text-white/40"
                 }`}
+                onClick={() => setOpen(false)}
               >
                 {link.icon}
                 {fullyopen && <span className="">{link.name}</span>}
-              </a>
+              </Link>
             ))}
           </div>
         )}
