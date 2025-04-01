@@ -57,7 +57,7 @@ export const sponsorTrackPrizesData = [
   },
   {
     prizeimgsrc: github,
-    prizeTitle: "Mastering GitHub: Beyond Code Storage",
+    prizeTitle: "Best use of GitHub",
     prize: "Mona(Octocat) Figurine",
     link: "https://docs.google.com/document/d/1u486dNmaO9Mu5exsvw1v1alxG-SdTeg_NZOlyaLp8zo/edit?usp=sharing",
     prizeDescription:

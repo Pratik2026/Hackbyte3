@@ -29,6 +29,7 @@ import sushant from "@/public/humansPage/Mentors/sushant.jpg";
 import gaurav from "@/public/humansPage/Mentors/gaurav.webp";
 import hridyesh from "@/public/humansPage/Mentors/hridyesh.jpeg";
 import agamya from "@/public/humansPage/Mentors/agamya.jpg";
+import siddharth from "@/public/humansPage/Mentors/siddharth.jpeg";
 
 export const MentorsData = [
   //Hackbyte 2.0 Mentors
@@ -147,6 +148,14 @@ export const MentorsData = [
   // },
 
   // Hackbyte 3.0 Mentors
+  {
+    name: "Siddharth Shivkumar",
+    role: "",
+    profilepic: siddharth,
+    linkedin: "https://www.linkedin.com/in/siddharth-shivkumar/?originalSubdomain=in",
+    twitter: "https://x.com/Siddharthshivkr",
+    github: "#",
+  },
   {
     name: "Vedant Jain",
     role: "",
