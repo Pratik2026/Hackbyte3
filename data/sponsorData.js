@@ -66,7 +66,7 @@ export const normalSponsorsData = [
   },
   {
     sponsor: "Devdock.ai",
-    category: "Silver Sponsor",
+    category: "Bronze Sponsor",
     sponsorimgsrc: devdock,
     site: "https://devdock.ai/",
   },
